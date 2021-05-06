@@ -6,7 +6,7 @@
 # Seulement un script a été ajouté pour l'instant, l'arène
 *Only one script add for now, arena
 
-#Comment ça marche ?
+# Comment ça marche ?
 Vous devez être placé dans le menu arène, dans Summoners War, sur un émulateur android (Bluestacks de préférence)
 
 Le bot attaquera uniquement les défénses avec un seul mob
