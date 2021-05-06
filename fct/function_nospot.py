@@ -8,17 +8,17 @@ pyautogui.FAILSAFE = False
 
 def random_sleep():
 
-    a = random.randint(1,10)
+    a = random.randint(1,11)
     pyautogui.moveTo(10, 10)
 
     if a < 11:
         rdm_time = random.uniform(1.1014324,2.8244330)
         print("sleep",rdm_time,"seconds")
         time.sleep(rdm_time)
-    #else :
-        #rdm_time = random.randint(15,50)
-        #print("Simmulation humain : sleep",rdm_time,"seconds")
-        #time.sleep(rdm_time)
+    else :
+        rdm_time = random.randint(15,90)
+        print("Simmulation humain : sleep",rdm_time,"seconds")
+        time.sleep(rdm_time)
         
 def refresh_list():
 
