@@ -1,8 +1,9 @@
 # Summoners-War-Python-Bot
-Python 3.x bot for Summoners war on emulator
 
-# With emulator : Bluestacks
+# Fonctionne avec emulateur android : Bluestacks
+*Work with Android emulator : Bluestacks
 
-# Only one script add for now, arena
+# Suelement un script a été ajouté pour l'instant, l'arène
+*Only one script add for now, arena
 
 
