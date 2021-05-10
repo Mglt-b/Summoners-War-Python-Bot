@@ -27,6 +27,9 @@ Le fonctionnement est uniquement via reconnaisance d'images à l'écran aucune d
 # Prérequis :
 
 Interpréteur python pour executer le code.
+
 Packages python : pyautogui / python_imagesearch 
+
 Bluestacks 
+
 Summoners war : Low quality ON / English langage
