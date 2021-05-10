@@ -21,3 +21,5 @@ Le bot n'attaquera pas les revenge - a scripter
 Il essayera d'attaquer uniquement les 4 premiers adversaires, et actualisera la liste au besoin, sans utiliser de cristaux.
 
 Des temporisations randoms ont été ajoutées pour simmuler un humain.
+
+Le fonctionnement est uniquement via reconnaisance d'images à l'écran aucune donnée n'est injectée ou récupérée.
