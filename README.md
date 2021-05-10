@@ -23,3 +23,10 @@ Il essayera d'attaquer uniquement les 4 premiers adversaires, et actualisera la 
 Des temporisations randoms ont été ajoutées pour simmuler un humain.
 
 Le fonctionnement est uniquement via reconnaisance d'images à l'écran aucune donnée n'est injectée ou récupérée.
+
+# Prérequis :
+
+Interpréteur python pour executer le code.
+Packages python : pyautogui / python_imagesearch 
+Bluestacks 
+Summoners war : Low quality ON / English langage
