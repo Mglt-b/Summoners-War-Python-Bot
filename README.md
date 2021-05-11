@@ -44,6 +44,8 @@ Summoners war : Low quality ON / English langage
 
 Python imagesearch
 
+Pyautogui
+
 # Idées
 
 Arène : Attaquer les fake def de plusieurs mobs avec aucun mob 6*.
