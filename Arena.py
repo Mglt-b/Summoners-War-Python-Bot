@@ -1,6 +1,6 @@
-from python_imagesearch.imagesearch import imagesearch
-from python_imagesearch.imagesearch import imagesearch_loop
-from python_imagesearch.imagesearch import imagesearch_count
+from fct.imgs.imagesearch import imagesearch
+from fct.imgs.imagesearch import imagesearch_loop
+from fct.imgs.imagesearch import imagesearch_count
 import pyautogui
 import time
 from fct.function_nospot import *
@@ -19,6 +19,7 @@ while 1>0:
         
         while 1>0:
 
+            is_rival = there_is_rival()
 
             #on est dans la liste de combat, on check la position des 4 ailes.
             time.sleep(5)
@@ -27,6 +28,32 @@ while 1>0:
             
             print("il y a ",nb_ailes," adversaires a fight")
             print(ailes_count_pos)
+
+            if nb_ailes == 0 and is_rival == 1:
+
+                print("On scroll pour regarde plus bas")
+                random_sleep()
+                a_rival_pos = imagesearch("./img/a_rival.png")
+                random_sleep()
+                b_rival_pos = imagesearch("./img/b_rival.png")
+
+                if a_rival_pos[0] != 0:
+
+                    pyautogui.moveTo(a_rival_pos[0], a_rival_pos[1])
+                    print("on est en haut de la liste rival, on scroll")
+                    time.sleep(1)
+                    pyautogui.scroll(-100)
+                    random_sleep()
+
+                if b_rival_pos[0] != 0:
+
+                    pyautogui.moveTo(b_rival_pos[0], b_rival_pos[1])
+                    print("on est en bas de la liste rival, on continue")
+                    time.sleep(1)
+                    pyautogui.scroll(-100)
+                    random_sleep()
+                
+
 
             if nb_ailes > 0:
 
@@ -47,9 +74,9 @@ while 1>0:
                     random_sleep()
                     solo_def2_pos = imagesearch("./img/solo_def2.png")
 
-                    if solo_def_pos[0] != -1 or solo_def2_pos[0] != -1:
+                    if is_rival == 1 or solo_def_pos[0] != -1 or solo_def2_pos[0] != -1:
 
-                        print("Il y a un seul mob en def")
+                        print("Il y a un seul mob en def, ou bien rival.")
 
                     
                         random_sleep()       
@@ -77,13 +104,14 @@ while 1>0:
                                     random_sleep()  
                                     pyautogui.click(end_fight_pos[0], end_fight_pos[1])
                                     random_sleep()  
+                                    
+                                    if is_rival == 0:
+                                        end_fight2_pos = imagesearch_loop("./img/end_fight2.png",1)
 
-                                    end_fight2_pos = imagesearch_loop("./img/end_fight2.png",1)
+                                        if end_fight2_pos[0] != -1:
 
-                                    if end_fight2_pos[0] != -1:
-
-                                        random_sleep()  
-                                        pyautogui.click(end_fight2_pos[0], end_fight2_pos[1])
+                                            random_sleep()  
+                                            pyautogui.click(end_fight2_pos[0], end_fight2_pos[1])
            
                     else:
                         print("Il semble y avoir une vraie def, def suivante.")
@@ -100,7 +128,15 @@ while 1>0:
 
                                 random_sleep()  
                                 pyautogui.click(exit_menu_fight2_pos[0], exit_menu_fight2_pos[1]) 
-                refresh_list()
+                if is_rival == 0:
+                    refresh_list()
+                else :
+                    random_sleep()
+                    match_up_pos = imagesearch("./img/match_up.png")
+                    if match_up_pos[0] != -1:
+                        print("On retourne dans liste arene.")
+                        random_sleep()
+                        pyautogui.click(match_up_pos[0],match_up_pos[1])
 
 
 
