@@ -1,5 +1,9 @@
 # Summoners-War-Python-Bot
 
+Le but de ce bot python est d'automatiser le jeu Summoners war, sur mobile.
+
+Si vous êtes interessés pour travailler avec moi, ou bien faire des retours sur l'utilisation, n'hésitez pas.
+
 # Fonctionne avec emulateur android : Bluestacks
 *Work with Android emulator : Bluestacks
 
