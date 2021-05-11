@@ -4,7 +4,7 @@ Le but de ce bot python est d'automatiser le jeu Summoners war, sur mobile.
 
 Si vous êtes interessés pour travailler avec moi, ou bien faire des retours sur l'utilisation, n'hésitez pas.
 
-#Mises à jour
+# Mises à jour
 
 11/05/2021 : Le bot combat désormais les rivaux.
 
@@ -47,4 +47,5 @@ Python imagesearch
 # Idées
 
 Arène : Attaquer les fake def de plusieurs mobs avec aucun mob 6*.
+
 Arène : Attaquer les joueurs qui ne sont pas level 50.
