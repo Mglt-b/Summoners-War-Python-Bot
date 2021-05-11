@@ -1,5 +1,5 @@
-from python_imagesearch.imagesearch import imagesearch
-from python_imagesearch.imagesearch import imagesearch_loop
+from .imgs.imagesearch import imagesearch
+from .imgs.imagesearch import imagesearch_loop
 import pyautogui
 import time
 import random
@@ -8,10 +8,10 @@ pyautogui.FAILSAFE = False
 
 def random_sleep():
 
-    a = random.randint(1,11)
+    a = random.randint(1,500)
     pyautogui.moveTo(10, 10)
 
-    if a < 11:
+    if a < 480:
         rdm_time = random.uniform(1.1014324,2.8244330)
         print("sleep",rdm_time,"seconds")
         time.sleep(rdm_time)
@@ -70,3 +70,25 @@ def go_to_battle_list():
             print('Lien vers menu non trouvé. On est dans le mauvais menu ? Placez vous dans le menu arène.')
             time.sleep(2)
             return "0"
+
+def there_is_rival():
+        random_sleep()
+        rival_pos = imagesearch("./img/rival_needed.png")
+        if rival_pos[0] != -1:
+            print("Il y a des rivaux a fight.")
+            random_sleep()
+            pyautogui.click(rival_pos[0],rival_pos[1])
+            return 1
+
+        else:
+
+            print('Pas de rival a fight, on continue.')
+            time.sleep(2)
+
+            match_up_pos = imagesearch("./img/match_up.png")
+            if match_up_pos[0] != -1:
+                print("On retourne dans liste arene.")
+                random_sleep()
+                pyautogui.click(match_up_pos[0],match_up_pos[1])
+
+            return 0
