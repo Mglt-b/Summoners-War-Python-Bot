@@ -15,7 +15,14 @@ Si vous êtes interessés pour travailler avec moi, ou bien faire des retours su
 16/05/2021 : Ajout automatisation TOA/TOAH.
 
 # Fonctionne avec emulateur android : Bluestacks
-*Work with Android emulator : Bluestacks
+Par securité, ne pas autoriser les accès de stockages a l'application Summoners wars.
+
+Les paramètres graphiques doivent être les suivants :
+
+-
+
+-
+
 
 # Seulement un script a été ajouté pour l'instant, l'arène
 *Only one script add for now, arena
